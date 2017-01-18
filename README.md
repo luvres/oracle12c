@@ -1,5 +1,10 @@
 ## Oracle 12c Enterprise Edition
 -----
+Install docker
+```
+curl -sSL https://get.docker.com | sh
+sudo usermod -aG docker $USER
+```
 #### Begin
 ```
 git clone https://github.com/luvres/oracle12c.git
