@@ -61,5 +61,7 @@ split -b $((`ls -l | grep img-oracle12c.tar | awk '{print $5}'` /5)) img-oracle1
 ```
 ##### Load saved image
 ```
+cat img-oracle12c.part-* >img-oracle12c.tar
+
 docker load < img-oracle12c.tar
 ```
