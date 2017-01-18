@@ -1,4 +1,4 @@
-FROM oraclelinux:latest
+FROM oraclelinux
 MAINTAINER Leonardo Loures <luvres@hotmail.com>
 
 ENV ORACLE_BASE=/opt/oracle \
