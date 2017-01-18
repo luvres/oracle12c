@@ -22,7 +22,7 @@ sudo curl -L http://raw.githubusercontent.com/luvres/oracle12c/master/oracle12c.
 ```
 #### Run image
 ```
-docker run --name Oracle -p 1521:1521 -d izone/oracle:12c
+docker run --name Oracle -h enterprise -p 1521:1521 -d izone/oracle:12c
 docker logs -f Oracle
 ```
 #### Set password
