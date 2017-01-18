@@ -27,7 +27,8 @@ COPY $RUN_FILE $START_FILE $CREATE_DB_FILE $CONFIG_RSP $PWD_FILE $ORACLE_BASE/
 RUN chmod ug+x $INSTALL_DIR/*.sh && \
     sync && \
     $INSTALL_DIR/$CHECK_SPACE_FILE && \
-    $INSTALL_DIR/$SETUP_LINUX_FILE
+    $INSTALL_DIR/$SETUP_LINUX_FILE \
+    && echo "root:pwdtec2040123" | chpasswd
 
 USER oracle
 RUN $INSTALL_DIR/$INSTALL_DB_BINARIES_FILE EE
@@ -35,8 +36,7 @@ RUN $INSTALL_DIR/$INSTALL_DB_BINARIES_FILE EE
 USER root
 RUN $ORACLE_BASE/oraInventory/orainstRoot.sh && \
     $ORACLE_HOME/root.sh && \
-    rm -rf $INSTALL_DIR \
-    echo "root:pwdtec2040123" | chpasswd
+    rm -rf $INSTALL_DIR
 
 USER oracle
 WORKDIR /home/oracle
