@@ -10,11 +10,6 @@
 # DO NOT ALTER OR REMOVE COPYRIGHT NOTICES OR THIS HEADER.
 # 
 
-##### Root Password
-rootPass(){
-  echo "root:$RPASS" | chpasswd
-};rootPass
-
 ########### Move DB files ############
 function moveFiles {
 
