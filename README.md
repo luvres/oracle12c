@@ -56,6 +56,8 @@ select banner from v$version;
 ##### Save image
 ```
 docker save izone/oracle:12c > img-oracle12c.tar
+
+split -b $((`ls -l | grep img-oracle12c.tar | awk '{print $5}'` /5)) img-oracle12c.tar img-oracle12c.part-
 ```
 ##### Load saved image
 ```
