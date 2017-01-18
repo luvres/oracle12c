@@ -42,6 +42,19 @@ EOF
 
 chmod +x $HOME/Desktop/oracle.desktop
 ```
+#### Link to Oracle 12c in Desktop (Portuguese)
+```
+tee $HOME/Área\ de\ Trabalho//oracle.desktop <<EOF
+[Desktop Entry]
+Encoding=UTF-8
+Type=Application
+Name=Oracle EE
+Icon=/opt/oracle12c/oracle12c.png
+Exec=/usr/bin/gnome-terminal -e "docker exec -ti Oracle sqlplus system/oracle@ORCL"
+EOF
+
+chmod +x $HOME/Área\ de\ Trabalho//oracle.desktop
+```
 #### Admininstration
 ```
 docker stop Oracle
